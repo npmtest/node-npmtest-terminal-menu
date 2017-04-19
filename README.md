@@ -1,7 +1,10 @@
-# test coverage for  [terminal-menu (v2.1.1)](https://github.com/substack/terminal-menu)  [![npm package](https://img.shields.io/npm/v/npmtest-terminal-menu.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-terminal-menu) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-terminal-menu.svg)](https://travis-ci.org/npmtest/node-npmtest-terminal-menu)
+# npmtest-terminal-menu
+
+#### test coverage for  [terminal-menu (v2.1.1)](https://github.com/substack/terminal-menu)  [![npm package](https://img.shields.io/npm/v/npmtest-terminal-menu.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-terminal-menu) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-terminal-menu.svg)](https://travis-ci.org/npmtest/node-npmtest-terminal-menu)
+
 #### retro ansi terminal menus for serious 80s technicolor business
 
-[![NPM](https://nodei.co/npm/terminal-menu.png?downloads=true)](https://www.npmjs.com/package/terminal-menu)
+[![NPM](https://nodei.co/npm/terminal-menu.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/terminal-menu)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-terminal-menu/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-terminal-menu/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-terminal-menu/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-terminal-menu/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-terminal-menu/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-terminal-menu/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-terminal-menu/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-terminal-menu/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-terminal-menu/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-terminal-menu/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-terminal-menu%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-terminal-menu/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-terminal-menu/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-terminal-menu/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-terminal-menu/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-terminal-menu%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-terminal-menu/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-terminal-menu/build/test-report.html](https://npmtest.github.io/node-npmtest-terminal-menu/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-terminal-menu/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-terminal-menu/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-terminal-menu/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-terminal-menu/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-terminal-menu/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-terminal-menu/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-terminal-menu/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "James Halliday",
-        "email": "mail@substack.net",
         "url": "http://substack.net"
     },
     "bugs": {
@@ -62,13 +70,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "substack",
-            "email": "mail@substack.net"
+            "name": "substack"
         }
     ],
     "name": "terminal-menu",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/substack/terminal-menu.git"
