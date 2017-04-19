@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-terminal-menu/terminal-menu/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-terminal-menu/node_modules/terminal-menu/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-terminal-menu">npmtest-terminal-menu (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-terminal-menu/terminal-menu/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-terminal-menu/node_modules/terminal-menu/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">13.87% <small>(19 / 137)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-terminal-menu/terminal-menu/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-terminal-menu/node_modules/terminal-menu/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -661,226 +663,225 @@ var through = require('through2');
 var duplexer = require('duplexer2');
 var visualwidth = require('visualwidth');
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function (opts) {</span>
-<span class="cstat-no" title="statement not covered">    return new Menu(opts || {});</span>
+module.exports = <span class="fstat-no" title="function not covered" >function (opts) {</span>
+<span class="cstat-no" title="statement not covered" >    return new Menu(opts || {});</span>
 }
 &nbsp;
 inherits(Menu, EventEmitter);
 &nbsp;
-<span class="fstat-no" title="function not covered">function Menu (opts) {</span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    self.width = opts.width || 50;</span>
-<span class="cstat-no" title="statement not covered">    self.x = opts.x || 1;</span>
-<span class="cstat-no" title="statement not covered">    self.y = opts.y || 1;</span>
-<span class="cstat-no" title="statement not covered">    self.init = { x: self.x, y: self.y };</span>
-<span class="cstat-no" title="statement not covered">    self.items = [];</span>
-<span class="cstat-no" title="statement not covered">    self.lines = {};</span>
-<span class="cstat-no" title="statement not covered">    self.selected = opts.selected || 0;</span>
-<span class="cstat-no" title="statement not covered">    self.colors = {</span>
+<span class="fstat-no" title="function not covered" >function Menu (opts) {</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    self.width = opts.width || 50;</span>
+<span class="cstat-no" title="statement not covered" >    self.x = opts.x || 1;</span>
+<span class="cstat-no" title="statement not covered" >    self.y = opts.y || 1;</span>
+<span class="cstat-no" title="statement not covered" >    self.init = { x: self.x, y: self.y };</span>
+<span class="cstat-no" title="statement not covered" >    self.items = [];</span>
+<span class="cstat-no" title="statement not covered" >    self.lines = {};</span>
+<span class="cstat-no" title="statement not covered" >    self.selected = opts.selected || 0;</span>
+<span class="cstat-no" title="statement not covered" >    self.colors = {</span>
         fg: opts.fg || 'white',
         bg: opts.bg || 'blue'
     };
     
-<span class="cstat-no" title="statement not covered">    self.padding = opts.padding || {</span>
+<span class="cstat-no" title="statement not covered" >    self.padding = opts.padding || {</span>
         left: 2,
         right: 2,
         top: 1,
         bottom: 1
     };
-<span class="cstat-no" title="statement not covered">    if (typeof self.padding === 'number') {</span>
-<span class="cstat-no" title="statement not covered">        self.padding = {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof self.padding === 'number') {</span>
+<span class="cstat-no" title="statement not covered" >        self.padding = {</span>
             left: self.padding,
             right: self.padding,
             top: self.padding,
             bottom: self.padding
         };
     }
-<span class="cstat-no" title="statement not covered">    self.x += self.padding.left;</span>
-<span class="cstat-no" title="statement not covered">    self.y += self.padding.top;</span>
-<span class="cstat-no" title="statement not covered">    self.size = {</span>
+<span class="cstat-no" title="statement not covered" >    self.x += self.padding.left;</span>
+<span class="cstat-no" title="statement not covered" >    self.y += self.padding.top;</span>
+<span class="cstat-no" title="statement not covered" >    self.size = {</span>
         x: self.width + self.padding.left + self.padding.right
     };
     
-<span class="cstat-no" title="statement not covered">    self._input = through(</span>
-<span class="fstat-no" title="function not covered">        function (buf, enc, next) {</span>
-<span class="cstat-no" title="statement not covered">            self._ondata(buf);</span>
-<span class="cstat-no" title="statement not covered">            next();</span>
+<span class="cstat-no" title="statement not covered" >    self._input = through(</span>
+<span class="fstat-no" title="function not covered" >        function (buf, enc, next) {</span>
+<span class="cstat-no" title="statement not covered" >            self._ondata(buf);</span>
+<span class="cstat-no" title="statement not covered" >            next();</span>
         },
-<span class="fstat-no" title="function not covered">        function () {</span> <span class="cstat-no" title="statement not covered">self.emit('close') }</span>
+<span class="fstat-no" title="function not covered" >        function () {</span> <span class="cstat-no" title="statement not covered" >self.emit('close') }</span>
     );
-<span class="cstat-no" title="statement not covered">    self._output = through();</span>
-<span class="cstat-no" title="statement not covered">    self.charm = opts.charm || createCharm({</span>
+<span class="cstat-no" title="statement not covered" >    self._output = through();</span>
+<span class="cstat-no" title="statement not covered" >    self.charm = opts.charm || createCharm({</span>
         input: self._input
     });
-<span class="cstat-no" title="statement not covered">    self.charm.on('error', <span class="fstat-no" title="function not covered">function () {</span>});</span>
-<span class="cstat-no" title="statement not covered">    self.charm.pipe(self._output);</span>
+<span class="cstat-no" title="statement not covered" >    self.charm.on('error', <span class="fstat-no" title="function not covered" >function () {</span>});</span>
+<span class="cstat-no" title="statement not covered" >    self.charm.pipe(self._output);</span>
     
-<span class="cstat-no" title="statement not covered">    self.stream = self.charm.pipe(through());</span>
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">        self.charm.display('reset');</span>
-<span class="cstat-no" title="statement not covered">        self.charm.display('bright');</span>
+<span class="cstat-no" title="statement not covered" >    self.stream = self.charm.pipe(through());</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >        self.charm.display('reset');</span>
+<span class="cstat-no" title="statement not covered" >        self.charm.display('bright');</span>
     }
     catch (e) {}
     
-<span class="cstat-no" title="statement not covered">    process.nextTick(<span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        self._ticked = true;</span>
-<span class="cstat-no" title="statement not covered">        self.charm.cursor(false);</span>
-<span class="cstat-no" title="statement not covered">        self._draw();</span>
+<span class="cstat-no" title="statement not covered" >    process.nextTick(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        self._ticked = true;</span>
+<span class="cstat-no" title="statement not covered" >        self.charm.cursor(false);</span>
+<span class="cstat-no" title="statement not covered" >        self._draw();</span>
     });
 };
 &nbsp;
-Menu.prototype.createStream = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    return duplexer(this._input, this._output);</span>
+Menu.prototype.createStream = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return duplexer(this._input, this._output);</span>
 };
 &nbsp;
-Menu.prototype.add = <span class="fstat-no" title="function not covered">function (label, cb) {</span>
-<span class="cstat-no" title="statement not covered">    var index = this.items.length;</span>
-<span class="cstat-no" title="statement not covered">    if (cb) {</span>
-<span class="cstat-no" title="statement not covered">        this.on('select', <span class="fstat-no" title="function not covered">function (x, ix) {</span></span>
-<span class="cstat-no" title="statement not covered">            if (ix === index) <span class="cstat-no" title="statement not covered">cb(x, ix);</span></span>
+Menu.prototype.add = <span class="fstat-no" title="function not covered" >function (label, cb) {</span>
+<span class="cstat-no" title="statement not covered" >    var index = this.items.length;</span>
+<span class="cstat-no" title="statement not covered" >    if (cb) {</span>
+<span class="cstat-no" title="statement not covered" >        this.on('select', <span class="fstat-no" title="function not covered" >function (x, ix) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (ix === index) <span class="cstat-no" title="statement not covered" >cb(x, ix);</span></span>
         });
     }
     
-<span class="cstat-no" title="statement not covered">    this.items.push({</span>
+<span class="cstat-no" title="statement not covered" >    this.items.push({</span>
         x: this.x,
         y: this.y,
         label: label
     });
-<span class="cstat-no" title="statement not covered">    this._fillLine(this.y);</span>
-<span class="cstat-no" title="statement not covered">    this.y ++;</span>
+<span class="cstat-no" title="statement not covered" >    this._fillLine(this.y);</span>
+<span class="cstat-no" title="statement not covered" >    this.y ++;</span>
 };
 &nbsp;
-Menu.prototype._fillLine = <span class="fstat-no" title="function not covered">function (y) {</span>
-<span class="cstat-no" title="statement not covered">    if (!this.lines[y]) {</span>
-<span class="cstat-no" title="statement not covered">        this.charm.position(this.init.x, y);</span>
-<span class="cstat-no" title="statement not covered">        this.charm.write(Array(1 + this.size.x).join(' '));</span>
-<span class="cstat-no" title="statement not covered">        this.lines[y] = true;</span>
+Menu.prototype._fillLine = <span class="fstat-no" title="function not covered" >function (y) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!this.lines[y]) {</span>
+<span class="cstat-no" title="statement not covered" >        this.charm.position(this.init.x, y);</span>
+<span class="cstat-no" title="statement not covered" >        this.charm.write(Array(1 + this.size.x).join(' '));</span>
+<span class="cstat-no" title="statement not covered" >        this.lines[y] = true;</span>
     }
 };
 &nbsp;
-Menu.prototype.jump = <span class="fstat-no" title="function not covered">function (name) {</span>
-<span class="cstat-no" title="statement not covered">    var index = typeof name === 'number'</span>
+Menu.prototype.jump = <span class="fstat-no" title="function not covered" >function (name) {</span>
+<span class="cstat-no" title="statement not covered" >    var index = typeof name === 'number'</span>
         ? name
         : this.items
-            .map(<span class="fstat-no" title="function not covered">function (item) {</span> <span class="cstat-no" title="statement not covered">return item.label }</span>)
+            .map(<span class="fstat-no" title="function not covered" >function (item) {</span> <span class="cstat-no" title="statement not covered" >return item.label }</span>)
             .indexOf(name)
     ;
-<span class="cstat-no" title="statement not covered">    if (index &lt; 0) <span class="cstat-no" title="statement not covered">return;</span></span>
-<span class="cstat-no" title="statement not covered">    var prev = this.selected;</span>
-<span class="cstat-no" title="statement not covered">    this.selected = index;</span>
-<span class="cstat-no" title="statement not covered">    if (this._ticked) {</span>
-<span class="cstat-no" title="statement not covered">        this._drawRow(prev);</span>
-<span class="cstat-no" title="statement not covered">        this._drawRow(index);</span>
+<span class="cstat-no" title="statement not covered" >    if (index &lt; 0) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >    var prev = this.selected;</span>
+<span class="cstat-no" title="statement not covered" >    this.selected = index;</span>
+<span class="cstat-no" title="statement not covered" >    if (this._ticked) {</span>
+<span class="cstat-no" title="statement not covered" >        this._drawRow(prev);</span>
+<span class="cstat-no" title="statement not covered" >        this._drawRow(index);</span>
     }
 };
 &nbsp;
-Menu.prototype.close = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    this._input.end();</span>
-<span class="cstat-no" title="statement not covered">    this.charm.cursor(true);</span>
-<span class="cstat-no" title="statement not covered">    this.charm.display('reset');</span>
-<span class="cstat-no" title="statement not covered">    this.charm.position(1, this.y + 1);</span>
-<span class="cstat-no" title="statement not covered">    this.charm.end();</span>
+Menu.prototype.close = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    this._input.end();</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.cursor(true);</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.display('reset');</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.position(1, this.y + 1);</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.end();</span>
 };
 &nbsp;
-Menu.prototype.reset = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    this.charm.reset();</span>
+Menu.prototype.reset = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.reset();</span>
 };
 &nbsp;
-Menu.prototype.write = <span class="fstat-no" title="function not covered">function (msg) {</span>
-<span class="cstat-no" title="statement not covered">    this.charm.background(this.colors.bg);</span>
-<span class="cstat-no" title="statement not covered">    this.charm.foreground(this.colors.fg);</span>
-<span class="cstat-no" title="statement not covered">    this._fillLine(this.y);</span>
+Menu.prototype.write = <span class="fstat-no" title="function not covered" >function (msg) {</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.background(this.colors.bg);</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.foreground(this.colors.fg);</span>
+<span class="cstat-no" title="statement not covered" >    this._fillLine(this.y);</span>
     
-<span class="cstat-no" title="statement not covered">    var parts = msg.split('\n');</span>
+<span class="cstat-no" title="statement not covered" >    var parts = msg.split('\n');</span>
     
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; parts.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">        if (parts[i].length) {</span>
-<span class="cstat-no" title="statement not covered">            this.charm.position(this.x, this.y);</span>
-<span class="cstat-no" title="statement not covered">            this.charm.write(parts[i]);</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; parts.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        if (parts[i].length) {</span>
+<span class="cstat-no" title="statement not covered" >            this.charm.position(this.x, this.y);</span>
+<span class="cstat-no" title="statement not covered" >            this.charm.write(parts[i]);</span>
         }
-<span class="cstat-no" title="statement not covered">        if (i !== parts.length - 1) {</span>
-<span class="cstat-no" title="statement not covered">            this.x = this.init.x + this.padding.left;</span>
-<span class="cstat-no" title="statement not covered">            this._fillLine(this.y);</span>
-<span class="cstat-no" title="statement not covered">            this.y ++;</span>
+<span class="cstat-no" title="statement not covered" >        if (i !== parts.length - 1) {</span>
+<span class="cstat-no" title="statement not covered" >            this.x = this.init.x + this.padding.left;</span>
+<span class="cstat-no" title="statement not covered" >            this._fillLine(this.y);</span>
+<span class="cstat-no" title="statement not covered" >            this.y ++;</span>
         }
     }
 };
 &nbsp;
-Menu.prototype._draw = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; this.padding.top; i++) {</span>
-<span class="cstat-no" title="statement not covered">        this._fillLine(this.init.y + i);</span>
+Menu.prototype._draw = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; this.padding.top; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        this._fillLine(this.init.y + i);</span>
     }
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; this.items.length; i++) <span class="cstat-no" title="statement not covered">this._drawRow(i);</span></span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; this.items.length; i++) <span class="cstat-no" title="statement not covered" >this._drawRow(i);</span></span>
     
     // reset foreground and background colors
-<span class="cstat-no" title="statement not covered">    this.charm.background(this.colors.bg);</span>
-<span class="cstat-no" title="statement not covered">    this.charm.foreground(this.colors.fg);</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.background(this.colors.bg);</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.foreground(this.colors.fg);</span>
     
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; this.padding.bottom; i++) {</span>
-<span class="cstat-no" title="statement not covered">        this._fillLine(this.y + i);</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; this.padding.bottom; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        this._fillLine(this.y + i);</span>
     }
 };
 &nbsp;
-Menu.prototype._drawRow = <span class="fstat-no" title="function not covered">function (index) {</span>
-<span class="cstat-no" title="statement not covered">    index = (index + this.items.length) % this.items.length;</span>
-<span class="cstat-no" title="statement not covered">    var item = this.items[index];</span>
-<span class="cstat-no" title="statement not covered">    this.charm.position(item.x, item.y);</span>
+Menu.prototype._drawRow = <span class="fstat-no" title="function not covered" >function (index) {</span>
+<span class="cstat-no" title="statement not covered" >    index = (index + this.items.length) % this.items.length;</span>
+<span class="cstat-no" title="statement not covered" >    var item = this.items[index];</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.position(item.x, item.y);</span>
     
-<span class="cstat-no" title="statement not covered">    if (this.selected === index) {</span>
-<span class="cstat-no" title="statement not covered">        this.charm.background(this.colors.fg);</span>
-<span class="cstat-no" title="statement not covered">        this.charm.foreground(this.colors.bg);</span>
+<span class="cstat-no" title="statement not covered" >    if (this.selected === index) {</span>
+<span class="cstat-no" title="statement not covered" >        this.charm.background(this.colors.fg);</span>
+<span class="cstat-no" title="statement not covered" >        this.charm.foreground(this.colors.bg);</span>
     }
     else {
-<span class="cstat-no" title="statement not covered">        this.charm.background(this.colors.bg);</span>
-<span class="cstat-no" title="statement not covered">        this.charm.foreground(this.colors.fg);</span>
+<span class="cstat-no" title="statement not covered" >        this.charm.background(this.colors.bg);</span>
+<span class="cstat-no" title="statement not covered" >        this.charm.foreground(this.colors.fg);</span>
     }
     
-<span class="cstat-no" title="statement not covered">    var len = this.width - visualwidth.width(item.label, true) + 1;</span>
-<span class="cstat-no" title="statement not covered">    this.charm.write(item.label + Array(Math.max(0, len)).join(' '));</span>
+<span class="cstat-no" title="statement not covered" >    var len = this.width - visualwidth.width(item.label, true) + 1;</span>
+<span class="cstat-no" title="statement not covered" >    this.charm.write(item.label + Array(Math.max(0, len)).join(' '));</span>
 };
 &nbsp;
-Menu.prototype._ondata = <span class="fstat-no" title="function not covered">function ondata (buf) {</span>
-<span class="cstat-no" title="statement not covered">    var bytes = [].slice.call(buf);</span>
-<span class="cstat-no" title="statement not covered">    while (bytes.length) {</span>
-<span class="cstat-no" title="statement not covered">        var codes = [].join.call(bytes, '.');</span>
-<span class="cstat-no" title="statement not covered">        if (/^(27.91.65|27,79.65|107|16)\b/.test(codes)) { // up or k</span>
-<span class="cstat-no" title="statement not covered">            this.selected = (this.selected - 1 + this.items.length)</span>
+Menu.prototype._ondata = <span class="fstat-no" title="function not covered" >function ondata (buf) {</span>
+<span class="cstat-no" title="statement not covered" >    var bytes = [].slice.call(buf);</span>
+<span class="cstat-no" title="statement not covered" >    while (bytes.length) {</span>
+<span class="cstat-no" title="statement not covered" >        var codes = [].join.call(bytes, '.');</span>
+<span class="cstat-no" title="statement not covered" >        if (/^(27.91.65|27,79.65|107|16)\b/.test(codes)) { // up or k</span>
+<span class="cstat-no" title="statement not covered" >            this.selected = (this.selected - 1 + this.items.length)</span>
                 % this.items.length
             ;
-<span class="cstat-no" title="statement not covered">            this._drawRow(this.selected + 1);</span>
-<span class="cstat-no" title="statement not covered">            this._drawRow(this.selected);</span>
-<span class="cstat-no" title="statement not covered">            if (/^107\b/.test(codes)) <span class="cstat-no" title="statement not covered">bytes.shift()</span></span>
-            else <span class="cstat-no" title="statement not covered">bytes.splice(0, 3);</span>
+<span class="cstat-no" title="statement not covered" >            this._drawRow(this.selected + 1);</span>
+<span class="cstat-no" title="statement not covered" >            this._drawRow(this.selected);</span>
+<span class="cstat-no" title="statement not covered" >            if (/^107\b/.test(codes)) <span class="cstat-no" title="statement not covered" >bytes.shift()</span></span>
+            else <span class="cstat-no" title="statement not covered" >bytes.splice(0, 3);</span>
         }
-<span class="cstat-no" title="statement not covered">        if (/^(27.91.66|27.79.66|106|14)\b/.test(codes)) { // down or j</span>
-<span class="cstat-no" title="statement not covered">            this.selected = (this.selected + 1) % this.items.length;</span>
-<span class="cstat-no" title="statement not covered">            this._drawRow(this.selected - 1);</span>
-<span class="cstat-no" title="statement not covered">            this._drawRow(this.selected);</span>
-<span class="cstat-no" title="statement not covered">            if (/^106\b/.test(codes)) <span class="cstat-no" title="statement not covered">bytes.shift()</span></span>
-            else <span class="cstat-no" title="statement not covered">bytes.splice(0, 3);</span>
+<span class="cstat-no" title="statement not covered" >        if (/^(27.91.66|27.79.66|106|14)\b/.test(codes)) { // down or j</span>
+<span class="cstat-no" title="statement not covered" >            this.selected = (this.selected + 1) % this.items.length;</span>
+<span class="cstat-no" title="statement not covered" >            this._drawRow(this.selected - 1);</span>
+<span class="cstat-no" title="statement not covered" >            this._drawRow(this.selected);</span>
+<span class="cstat-no" title="statement not covered" >            if (/^106\b/.test(codes)) <span class="cstat-no" title="statement not covered" >bytes.shift()</span></span>
+            else <span class="cstat-no" title="statement not covered" >bytes.splice(0, 3);</span>
         }
-        else <span class="cstat-no" title="statement not covered">if (/^(3|113)/.test(codes)) { // ^C or q</span>
-<span class="cstat-no" title="statement not covered">            this.charm.reset();</span>
-<span class="cstat-no" title="statement not covered">            this._input.end();</span>
-<span class="cstat-no" title="statement not covered">            this._output.end();</span>
-<span class="cstat-no" title="statement not covered">            bytes.shift();</span>
+        else <span class="cstat-no" title="statement not covered" >if (/^(3|113)/.test(codes)) { // ^C or q</span>
+<span class="cstat-no" title="statement not covered" >            this.charm.reset();</span>
+<span class="cstat-no" title="statement not covered" >            this._input.end();</span>
+<span class="cstat-no" title="statement not covered" >            this._output.end();</span>
+<span class="cstat-no" title="statement not covered" >            bytes.shift();</span>
         }
-        else <span class="cstat-no" title="statement not covered">if (/^(13|10)\b/.test(codes)) { // enter</span>
-<span class="cstat-no" title="statement not covered">            this.charm.position(1, this.items[this.items.length-1].y + 2);</span>
-<span class="cstat-no" title="statement not covered">            this.charm.display('reset');</span>
-<span class="cstat-no" title="statement not covered">            this.emit('select', this.items[this.selected].label, this.selected);</span>
-<span class="cstat-no" title="statement not covered">            bytes.shift();</span>
+        else <span class="cstat-no" title="statement not covered" >if (/^(13|10)\b/.test(codes)) { // enter</span>
+<span class="cstat-no" title="statement not covered" >            this.charm.position(1, this.items[this.items.length-1].y + 2);</span>
+<span class="cstat-no" title="statement not covered" >            this.charm.display('reset');</span>
+<span class="cstat-no" title="statement not covered" >            this.emit('select', this.items[this.selected].label, this.selected);</span>
+<span class="cstat-no" title="statement not covered" >            bytes.shift();</span>
         }
-        else <span class="cstat-no" title="statement not covered">bytes.shift();</span>
+        else <span class="cstat-no" title="statement not covered" >bytes.shift();</span>
     }
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 16:03:28 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 04:21:33 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
